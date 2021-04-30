@@ -19,6 +19,7 @@
 :root {
   --first-color: #4070F4;
   --second-color: #0E2431;
+  --third-color: #1b1b1b;
 }
 
 /*===== Fuente y tipografia =====*/
@@ -144,12 +145,29 @@ img {
 
 .l-header {
   width: 100%;
+  padding: 10px 0;
   position: fixed;
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: var(--second-color);
-  box-shadow: 0 1px 4px rgba(146, 161, 176, .15);
+  background-color: #ffff;
+  /* box-shadow: 0 1px 4px rgba(146, 161, 176, .15); */
+  transition: all 0.5s ease;
+}
+
+.l-header.sticky{
+  padding: 0;
+  box-shadow: 0 5px 4px rgba(146, 161, 176, .15);
+  
+}
+.nav__logo img.sticky {
+  width: 2.5rem;
+}
+.nav.sticky{
+  height: 3.5rem;
+}
+.nav__link.sticky{
+  color: #fff;
 }
 
 /*===== NAV =====*/
@@ -232,11 +250,13 @@ img {
 }
 
 .nav__logo img {
-  width: 3rem;
+  background: var(--second-color);
+  width: 4rem;
+  transition: all 1s ease;
 }
 
 .nav__toggle {
-  color: #fff;
+  color: var(--second-color);
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -602,7 +622,7 @@ img {
     display: none;
   }
   .nav__link {
-    color: #fff;
+    color: var(--second-color);
   }
   .home {
     height: 100vh;

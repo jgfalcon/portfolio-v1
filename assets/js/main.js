@@ -11,6 +11,20 @@ const showMenu = (toggleId, navId) =>{
 }
 showMenu('nav-toggle','nav-menu')
 
+/*STICKY NAVBAR*/
+const navbar = document.querySelector(".l-header");
+const navl = document.querySelectorAll(".nav__link");
+const nav = document.querySelector(".nav");
+const navlogo = document.querySelector(".nav__logo img");
+
+window.onscroll = ()=>{
+    this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    this.scrollY > 20 ? navlogo.classList.add("sticky") : navlogo.classList.remove("sticky");
+    this.scrollY > 20 ? nav.classList.add("sticky") : nav.classList.remove("sticky");
+    this.scrollY > 20 ? navl.classList.add("sticky") : navl.classList.remove("sticky");
+}
+
+
 /*===== ACTIVE AND REMOVE MENU =====*/
 const navLink = document.querySelectorAll('.nav__link');   
 
@@ -55,7 +69,5 @@ sr.reveal('.skills__img',{delay: 600});
 
 /*SCROLL WORK*/
 sr.reveal('.work__img',{interval: 200}); 
-
-
 
 
