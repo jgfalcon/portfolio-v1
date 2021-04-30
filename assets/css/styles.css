@@ -152,7 +152,7 @@ img {
   z-index: var(--z-fixed);
   background-color: #ffff;
   /* box-shadow: 0 1px 4px rgba(146, 161, 176, .15); */
-  transition: all 0.5s ease;
+  transition: all 1s ease;
 }
 
 .l-header.sticky{
